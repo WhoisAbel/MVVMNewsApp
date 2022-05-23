@@ -1,4 +1,4 @@
-package com.example.livedatapractice.data
+package com.example.livedatapractice.models
 
 data class Source(
     val id: Any,

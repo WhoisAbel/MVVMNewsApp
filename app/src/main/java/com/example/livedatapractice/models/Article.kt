@@ -1,4 +1,4 @@
-package com.example.livedatapractice.data
+package com.example.livedatapractice.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -2,7 +2,7 @@ package com.example.livedatapractice.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.livedatapractice.data.Article
+import com.example.livedatapractice.models.Article
 
 @Dao
 interface ArticleDao {
