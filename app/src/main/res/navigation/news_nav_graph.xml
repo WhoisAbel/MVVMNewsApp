@@ -6,12 +6,12 @@
 
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.example.livedatapractice.fragment.ArticleFragment"
+        android:name="com.example.livedatapractice.ui.fragment.ArticleFragment"
         android:label="ArticleFragment" />
 
     <fragment
         android:id="@+id/savedNewsFragment"
-        android:name="com.example.livedatapractice.fragment.SavedNewsFragment"
+        android:name="com.example.livedatapractice.ui.fragment.SavedNewsFragment"
         android:label="SavedNewsFragment">
         <action
             android:id="@+id/action_savedNewsFragment2_to_articleFragment"
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/searchNewsFragment"
-        android:name="com.example.livedatapractice.fragment.SearchFragment"
+        android:name="com.example.livedatapractice.ui.fragment.SearchFragment"
         android:label="SearchFragment">
         <action
             android:id="@+id/action_searchNewsFragment_to_articleFragment"
@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/breakingNewsFragment"
-        android:name="com.example.livedatapractice.fragment.BreakingNewsFragment"
+        android:name="com.example.livedatapractice.ui.fragment.BreakingNewsFragment"
         android:label="BreakingNewsFragment">
         <action
             android:id="@+id/action_breakingNewsFragment2_to_articleFragment"
