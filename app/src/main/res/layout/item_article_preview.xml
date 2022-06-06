@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivArticleImage"
             android:layout_width="160dp"
             android:layout_height="90dp"
@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvSource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivArticleImage" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             app:layout_constraintLeft_toRightOf="@+id/ivArticleImage"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             app:layout_constraintStart_toEndOf="@+id/ivArticleImage"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvPublishedAt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
