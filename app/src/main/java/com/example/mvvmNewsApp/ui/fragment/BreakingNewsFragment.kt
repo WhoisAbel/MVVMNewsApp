@@ -62,7 +62,7 @@ class BreakingNewsFragment : Fragment() {
 
         })
 
-        Toast.makeText(requireContext(), "Breaking News", Toast.LENGTH_SHORT).show()
+
     }
 
     private fun hideProgressBar() {
