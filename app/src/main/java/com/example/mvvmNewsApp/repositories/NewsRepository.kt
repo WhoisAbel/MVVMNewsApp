@@ -9,7 +9,10 @@ class NewsRepository(
     val db: ArticleDatabase
 ) {
 
-    suspend fun getBreakingNews(countryCode: String, pageNumber: Int)=
-         RetrofitInstance.api.getBreakingNews(countryCode, pageNumber)
+    suspend fun getBreakingNews(countryCode: String, pageNumber: Int) =
+        RetrofitInstance.api.getBreakingNews(countryCode, pageNumber)
+
+    suspend fun getSearch(searchQuery: String, pageNumber: Int) =
+        RetrofitInstance.api.searchForNews(searchQuery, pageNumber)
 
 }
