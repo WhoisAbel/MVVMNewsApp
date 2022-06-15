@@ -30,15 +30,5 @@ Technologies:
   
 - DiffUtil
 
+![mvvmNews](https://user-images.githubusercontent.com/92686655/173817731-c8fc2356-f68a-4087-8951-71347c945658.png)
 
-## BreakingNewsFragment
-![Screenshot_1655291182](https://user-images.githubusercontent.com/92686655/173815080-5ccee4d5-9e70-4d90-84da-f6cbacbff14a.png)
-
-## ArticleFragment
-![Screenshot_1655291225](https://user-images.githubusercontent.com/92686655/173815109-c6450402-5232-4080-af2b-480049595b53.png)
-
-## SavedNewsFragment
-![Screenshot_1655291231](https://user-images.githubusercontent.com/92686655/173815129-6df602d6-9d5d-4794-a28c-a844887e98f7.png)
-
-## SearchFragment
-![Screenshot_1655291254](https://user-images.githubusercontent.com/92686655/173815158-e12a8863-fcc0-4de8-b468-5d7898873fd1.png)
