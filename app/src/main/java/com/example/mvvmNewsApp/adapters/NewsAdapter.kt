@@ -12,15 +12,17 @@ import com.bumptech.glide.Glide
 import com.example.mvvmNewsApp.R
 import com.example.mvvmNewsApp.models.Article
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+class NewsAdapter(
+    private var onItemClickListener: ((Article) -> Unit)?
+) : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
 
-    inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cover: ImageView = itemView.findViewById(R.id.ivArticleImage)
         val source: TextView = itemView.findViewById(R.id.tvSource)
-        val description: TextView  = itemView.findViewById(R.id.tvDescription)
-        val title: TextView  = itemView.findViewById(R.id.tvTitle)
-        val publishedAt: TextView  = itemView.findViewById(R.id.tvPublishedAt)
+        val description: TextView = itemView.findViewById(R.id.tvDescription)
+        val title: TextView = itemView.findViewById(R.id.tvTitle)
+        val publishedAt: TextView = itemView.findViewById(R.id.tvPublishedAt)
     }
 
     private val differCallback = object : DiffUtil.ItemCallback<Article>() {
@@ -29,7 +31,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         }
 
         override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
-            return oldItem == newItem
+            return oldItem.id == newItem.id
         }
 
     }
@@ -48,23 +50,22 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         return differ.currentList.size
     }
 
+
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
 
         val article = differ.currentList[position]
         holder.itemView.apply {
             Glide.with(this).load(article.urlToImage).into(holder.cover)
-            holder.source.text = article.source.name
+            holder.source.text = article.source?.name
             holder.description.text = article.description
             holder.title.text = article.title
             holder.publishedAt.text = article.publishedAt
         }
 
-    }
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(article)
+        }
 
-    private var onItemClickListener : ((Article) -> Unit)? = null
-
-    fun setOnItemClickListener (listener: (Article) -> Unit){
-        onItemClickListener = listener
 
     }
 

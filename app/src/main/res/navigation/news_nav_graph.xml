@@ -7,14 +7,18 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.mvvmNewsApp.ui.fragment.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.mvvmNewsApp.models.Article" />
+    </fragment>
 
     <fragment
         android:id="@+id/savedNewsFragment"
         android:name="com.example.mvvmNewsApp.ui.fragment.SavedNewsFragment"
         android:label="SavedNewsFragment">
         <action
-            android:id="@+id/action_savedNewsFragment2_to_articleFragment"
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
 
@@ -32,7 +36,7 @@
         android:name="com.example.mvvmNewsApp.ui.fragment.BreakingNewsFragment"
         android:label="BreakingNewsFragment">
         <action
-            android:id="@+id/action_breakingNewsFragment2_to_articleFragment"
+            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
 
