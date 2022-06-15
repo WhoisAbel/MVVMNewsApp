@@ -54,5 +54,15 @@ class NewsViewModel(
         return Resource.Error(response.message())
     }
 
+    fun getAllArticles() = newsRepository.getAllArticles()
+
+    fun upsert(article: Article) = viewModelScope.launch {
+        newsRepository.upsert(article)
+    }
+
+    fun deleteArticle(article: Article) = viewModelScope.launch {
+        newsRepository.deleteArticle(article)
+    }
+
 
 }
