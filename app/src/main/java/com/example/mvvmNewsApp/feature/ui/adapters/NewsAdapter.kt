@@ -1,4 +1,4 @@
-package com.example.mvvmNewsApp.adapters
+package com.example.mvvmNewsApp.feature.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mvvmNewsApp.R
-import com.example.mvvmNewsApp.models.Article
+import com.example.mvvmNewsApp.feature.data.models.Article
 
 class NewsAdapter(
     private var onItemClickListener: ((Article) -> Unit)?

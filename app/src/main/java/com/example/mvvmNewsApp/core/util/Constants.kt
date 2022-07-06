@@ -1,4 +1,4 @@
-package com.example.mvvmNewsApp.util
+package com.example.mvvmNewsApp.core.util
 
 class Constants {
     companion object{

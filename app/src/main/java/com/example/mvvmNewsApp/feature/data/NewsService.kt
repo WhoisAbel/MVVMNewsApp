@@ -1,12 +1,12 @@
-package com.example.mvvmNewsApp.api
+package com.example.mvvmNewsApp.feature.data
 
-import com.example.mvvmNewsApp.models.NewsResponse
-import com.example.mvvmNewsApp.util.Constants.Companion.API_KEY
+import com.example.mvvmNewsApp.feature.data.models.NewsResponse
+import com.example.mvvmNewsApp.core.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface NewsAPI {
+interface NewsService {
 
 
     @GET("v2/top-headlines")
