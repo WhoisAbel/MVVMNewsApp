@@ -15,6 +15,8 @@ Technologies:
 - Room
   
 - ViewModel
+
+- Dagger
   
 - LiveData
   
