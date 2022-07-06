@@ -1,16 +1,17 @@
-package com.example.mvvmNewsApp.ui
+package com.example.mvvmNewsApp.feature.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mvvmNewsApp.models.Article
-import com.example.mvvmNewsApp.models.NewsResponse
-import com.example.mvvmNewsApp.repositories.NewsRepository
-import com.example.mvvmNewsApp.util.Resource
+import com.example.mvvmNewsApp.feature.data.models.Article
+import com.example.mvvmNewsApp.feature.data.models.NewsResponse
+import com.example.mvvmNewsApp.feature.data.NewsRepository
+import com.example.mvvmNewsApp.core.util.Resource
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import javax.inject.Inject
 
-class NewsViewModel(
+class NewsViewModel @Inject constructor(
     private val newsRepository: NewsRepository
 ) : ViewModel() {
 

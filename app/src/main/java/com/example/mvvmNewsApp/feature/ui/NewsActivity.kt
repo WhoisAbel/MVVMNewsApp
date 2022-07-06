@@ -1,32 +1,32 @@
-package com.example.mvvmNewsApp.ui
+package com.example.mvvmNewsApp.feature.ui
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.mvvmNewsApp.R
 import com.example.mvvmNewsApp.databinding.ActivityNewsBinding
-import com.example.mvvmNewsApp.db.ArticleDatabase
-import com.example.mvvmNewsApp.repositories.NewsRepository
+import com.example.mvvmNewsApp.core.db.ArticleDatabase
+import com.example.mvvmNewsApp.core.di.AppModule
+import com.example.mvvmNewsApp.core.di.DaggerAppComponent
+import com.example.mvvmNewsApp.feature.data.NewsRepository
+import javax.inject.Inject
 
 class NewsActivity : AppCompatActivity() {
-
-    lateinit var newsViewModel: NewsViewModel
 
     private lateinit var binding: ActivityNewsBinding
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val repository = NewsRepository(ArticleDatabase(this))
-        val viewModelFactory = NewsViewModelFactory(repository)
-        newsViewModel = ViewModelProvider(this, viewModelFactory)[NewsViewModel::class.java]
 
         setupNavigation()
     }

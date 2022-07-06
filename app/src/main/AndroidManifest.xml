@@ -15,7 +15,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.LiveDataPractice">
         <activity
-            android:name="com.example.mvvmNewsApp.ui.NewsActivity"
+            android:name="com.example.mvvmNewsApp.feature.ui.NewsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
